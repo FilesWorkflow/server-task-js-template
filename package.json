@@ -1,0 +1,28 @@
+{
+  "name": "server-task-template-js",
+  "version": "1.0.0",
+  "description": "",
+  "taskConfig": {
+    "name": "Server-side task development template",
+    "description": "",
+    "runOnServer": true,
+    "inputType": 0,
+    "params": [],
+    "serverTaskEnvs": [],
+    "supportFileTypes": []
+  },
+  "main": "./dist/task.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"webpack --watch --mode development\" \"node --watch test/test.js\"",
+    "build": "webpack --mode production && tsc --emitDeclarationOnly"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.44.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
